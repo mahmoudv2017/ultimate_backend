@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model users {
+  ID       Int    @id @unique(map: "ID") @default(autoincrement())
+  username String @unique(map: "username") @db.VarChar(100)
+  password String @db.VarChar(100)
+}
+
+model customers {
+  ID     Int    @id @unique(map: "ID_2") @default(autoincrement())
+  Name   String @db.VarChar(100)
+  Gender String @db.VarChar(100)
+
+  @@index([ID], map: "ID")
+}
+
+model more_info {
+  ID               Int    @id @default(autoincrement())
+  Animal           String @db.VarChar(150)
+  Car              String @db.VarChar(150)
+  Bitcoin_Address  String @db.VarChar(150)
+  Ethirium_Address String @db.VarChar(150)
+  Music_Genre      String @db.VarChar(150)
+}

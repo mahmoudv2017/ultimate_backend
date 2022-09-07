@@ -1,0 +1,158 @@
+### paginated api
+####################################################################
+
+### GET DATA
+
+GET http://localhost:8000/customers
+
+### POST DATA
+
+POST http://localhost:8000/customers
+content-type: application/json
+
+{
+    "name": "mahmouddddddddd",
+    "gender": "rtansformer"
+}
+
+### Update DATA
+
+PUT http://localhost:8000/customers/65
+content-type: application/json
+
+{
+    "name": "mahmoudd"
+}
+
+### Get One Record
+
+GET http://localhost:8000/customers/45
+
+### Delete One Record
+
+DELETE  http://localhost:8000/customers/2
+
+
+### Get Paginated Data
+
+GET http://localhost:8000/customers?page=2&limit=5
+
+
+
+
+### Search for a record
+
+GET http://localhost:8000/customers/search/camer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###login
+#################################################################
+
+GET http://localhost:8000/auth
+
+
+###
+
+
+POST http://localhost:8000/auth/verify HTTP/1.1
+
+
+###
+
+
+POST http://localhost:8000/auth/register HTTP/1.1
+content-type: application/json
+
+{
+    "username": "maahmoudv2017",
+    "password": "vcut2020"
+}
+
+
+###
+
+
+POST http://localhost:8000/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "maahmoudv2017",
+    "password": "vcut2020"
+}
+
+
+
+
+
+
+
+### socket.io
+####################################################################
+
+
+GET http://localhost:8000/socket
+
+
+
+
+### Graphql Schemes
+
+GET http://localhost:8000/graphql
+content-type: application/json
+
+{
+    "body" : "{ more_info }"
+}
+
+
+
+
+
+
+
+
+
+
+### prisma schemas
+
+GET http://localhost:8000/prisma
+
+
+###
+
+
+
+GET http://localhost:8000/prisma/customers
+
+
+###
+
+
+
+GET http://localhost:8000/prisma/customers/49
+
+
+
+###
+
+
+
+GET http://localhost:8000/asdasdasdasd

@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Authorization Test</h1>
+    <div class="content">
+        <button class="get-jwt"> Get JWT </button>
+        <button class="verify-jwt"> Verify JWT </button>
+        <button class="faker">
+            Name Generator
+        </button>
+        <textarea cols="30" rows="10"></textarea>
+        <h2 >loading</h2>
+    </div>
+
+    <div class="auth">
+
+
+        <div class="register">
+    
+    
+    
+            <form class="register-form" action="/auth/register"  method="post">
+                <input id="reg-user" name="username" placeholder="username" type="text">
+                <input name="password" placeholder="password" type="text">
+    
+                <input type="submit" value="register me">
+            </form>
+        </div>
+    
+        <div class="login">
+    
+       
+    
+            <form action="/auth/login" class="login-form" method="post">
+                <input name="username" placeholder="username" required type="text">
+                <input name="password" placeholder="password" required type="text">
+    
+                <input type="submit" value="login">
+            </form>
+        </div>
+    
+    
+    </div>
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.0.1/faker.min.js"></script>
+    <script src="useful_funcs.js"></script>
+    <script src="./scripts.js"></script>
+    <!-- <script src="../Scripts/faker-test.js"></script> -->
+</body>
+</html>

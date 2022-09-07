@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="download.png">
+    <link rel="stylesheet" href="./style.css">
+    <title>Socket.IO</title>
+</head>
+<body>
+    <h1>Welcome to my socket</h1>
+
+    <textarea name="chat" id="chat_area" cols="100" rows="30"></textarea>
+
+
+    <form method="post">
+
+        <input type="text" name="username" placeholder="Name" required>
+        <input type="text" name="room" autocomplete="off" placeholder="Room">
+        <input type="text" name="message" placeholder="type your message" required>
+        <input type="submit">
+        
+    </form>
+    <div class="buttons">
+        <button class="room_joiner">join</button>
+        <button class="room_leaver">leave</button>
+    </div>
+    
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js" integrity="sha512-MgkNs0gNdrnOM7k+0L+wgiRc5aLgl74sJQKbIWegVIMvVGPc1+gc1L2oK9Wf/D9pq58eqIJAxOonYPVE5UwUFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+    <script type="module" src="./socket_client.js"></script>
+</body>
+</html>
