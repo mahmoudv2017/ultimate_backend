@@ -25,7 +25,7 @@ const data_feller_customers =  (loops) => {
     
     for(let i = 0 ; i < loops ; i++){
 
-        let x = {Name : faker.faker.name.findName() , Gender : faker.faker.name.gender()}
+        let x = {Name : faker.faker.name.findName() , gender :  faker.faker.vehicle.manufacturer()}
 
         
         connection.query('INSERT INTO customers SET ?' , x , (err , results , field) => {
@@ -74,9 +74,10 @@ const delete_data = () => {
     })
 }
 
-//data_feller_customers(20)
+data_feller_customers(20)
 
-data_feller_more_info(20)
+//data_feller_more_info(20)
+//delete_data()
 // let int = document.querySelector('input[name : `username`]')
 
 // console.log(int)

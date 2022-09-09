@@ -71,9 +71,8 @@ router.post('/verify' , (req,res) => {
             res.status(401).send(err.name)
          
         }
-        res.send(payload)
+        res.status(200).send(payload)
     })
-    
 })
 
 

@@ -1,6 +1,7 @@
 function verify(){
-    xhttp.open('POST' , 'http://localhost:8000/auth/verify' , true)
-    xhttp.setRequestHeader("Content-type", "application/json; charset=utf-8");
+    xhttp.open('POST' , 'http://localhost:8000/auth/verify', true)
+    xhttp.setRequestHeader("Content-type", "text/html; charset=utf-8");
+    console.log({token : tokn})
     xhttp.send(`{
         "token": "${tokn}"
       }`)
@@ -22,11 +23,13 @@ let signed_in = (flag) => {
         document.querySelector('h2').innerText = 'logged in'
         document.querySelector('h2').classList.remove(['logged-out' , 'logged-in'])
         document.querySelector('h2').classList.add('logged-in')
+        document.querySelector('h2').style.color = 'lightblue'
     }
     else{
         document.querySelector('h2').innerText = 'logged out'
         document.querySelector('h2').classList.remove(['logged-out' , 'logged-in'])
         document.querySelector('h2').classList.add('logged-out')
+        document.querySelector('h2').style.color = 'red'
     }
  
 }

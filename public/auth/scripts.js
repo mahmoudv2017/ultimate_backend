@@ -19,7 +19,8 @@ xhttp.onreadystatechange = () => {
     if(xhttp.readyState == XMLHttpRequest.DONE)
     {
         console.log({status : xhttp.status })
-        document.querySelector('textarea').innerText = tokn = xhttp.responseText
+        document.querySelector('textarea').innerText = xhttp.responseText
+        tokn = xhttp.responseText
         signed_in( xhttp.status > 200 ? true  : false)
        
     }
